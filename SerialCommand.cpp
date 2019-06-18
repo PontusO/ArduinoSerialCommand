@@ -71,6 +71,11 @@ void SerialCommand::clearBuffer()
 	bufPos=0; 
 }
 
+void SerialCommand::setTermChar(char newterm)
+{
+  term = newterm;
+}
+
 // Retrieve the next token ("word" or "argument") from the Command buffer.  
 // returns a NULL if no more tokens exist.   
 char *SerialCommand::next() 

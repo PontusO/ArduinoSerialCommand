@@ -78,7 +78,8 @@ class SerialCommand
 		SerialCommand(SoftwareSerial &SoftSer);  // Constructor for using SoftwareSerial objects
 		#endif
 
-		void clearBuffer();   // Sets the command buffer to all '\0' (nulls)
+		void setTermChar(char); // Set a new termination character
+    void clearBuffer();   // Sets the command buffer to all '\0' (nulls)
 		char *next();         // returns pointer to next token found in command buffer (for getting arguments to commands)
 		void readSerial();    // Main entry point.  
 		void addCommand(const char *, void(*)());   // Add commands to processing dictionary
